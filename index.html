@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Mastery Demo</title>
+<style>
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .box {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: var(--secondary-color);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animated-box {
+    animation: slideIn 1s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    header, footer {
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>CSS Mastery Demo</h1>
+    <p>Creating Beautiful Webpages with CSS</p>
+  </header>
+  
+  <main>
+    <div class="box animated-box">
+      <h2>Welcome to My Demo</h2>
+      <p>This is a showcase of my CSS skills.</p>
+      <button class="button">Learn More</button>
+    </div>
+    
+    <div class="box animated-box">
+      <h2>Keyframe Animation</h2>
+      <p>Watch this box slide in with a fade effect.</p>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Mubarak. All rights reserved.</p>
+  </footer>
+</body>
+</html>
